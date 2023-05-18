@@ -14,14 +14,14 @@ module.exports = {
      */
 
     await queryInterface.bulkInsert("users_addresses", [
-      { users_address: "331 Crown Plaza, Central", users_id: 1 },
-      { users_address: "8080 Local Lane, Central", users_id: 2 },
-      { users_address: "4 Grasslane, Island 12", users_id: 1 },
+      { users_address: "331 Crown Plaza, Central", user_id: 1 },
+      { users_address: "8080 Local Lane, Central", user_id: 2 },
+      { users_address: "4 Grasslane, Island 12", user_id: 1 },
     ]);
 
     await queryInterface.bulkInsert("orders", [
-      { users_id: 1, total: 100 },
-      { users_id: 2, total: 120 },
+      { user_id: 1, total: 100 },
+      { user_id: 2, total: 120 },
     ]);
   },
 
