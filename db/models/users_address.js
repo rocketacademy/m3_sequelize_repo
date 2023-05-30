@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       users_address: DataTypes.STRING,
       usersId: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.INTERGER,
         references: {
           model: "users",
           key: "id",
