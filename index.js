@@ -1,13 +1,14 @@
 const express = require("express");
 const app = express();
 
-const fruit = ["Apple", "Banana"];
+const db = require("./db/models/index");
+const { fruit } = db;
 
 const FruitController = require("./Controllers/FruitController");
 const FruitRouter = require("./Routers/FruitRouter");
 
 // setup fruitController instance and fruitRouter instance
-const fruitController = new FruitController();
+const fruitController = new FruitController(fruit);
 const fruitRouter = new FruitRouter(fruitController, express);
 
 // Setting up middleware
