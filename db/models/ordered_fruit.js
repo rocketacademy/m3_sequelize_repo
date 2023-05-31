@@ -8,16 +8,16 @@ module.exports = (sequelize, DataTypes) => {
   }
   Ordered_fruit.init(
     {
-      quantity: DataTypes.INTEGER,
+      quantity: DataTypes.INTERGER,
       orderId: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.INTERGER,
         references: {
           model: "order",
           key: "id",
         },
       },
       fruitId: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.INTERGER,
         references: {
           model: "fruit",
           key: "id",
